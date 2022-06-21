@@ -1,5 +1,5 @@
 const selectFormat = document.querySelector('.select-format');
-const wrapper = document.querySelector("body > div.wrapper");
+const wrapper = document.querySelector(".wrapper");
 const slider = document.querySelector('#myRange');
 const gridFormat = slider.addEventListener('click', function slide() {
     setGrid(slider.value);
@@ -22,11 +22,11 @@ function createGrid () {
 
 //Change the format of the grid
 function setGrid(nb) {
-    const grid = document.querySelector("body > div.wrapper > div.grid");
+    const grid = document.querySelector(".grid");
     while (grid.hasChildNodes()) {
         grid.removeChild(grid.firstChild);
     }
-    grid.style = `width: 50vw; height: 80vh;margin: 0 auto; display: grid; grid-template-columns: repeat(${nb}, 1fr); grid-template-rows: repeat(${nb}, 1fr)`;
+    grid.style = `display: grid; grid-template-columns: repeat(${nb}, 1fr); grid-template-rows: repeat(${nb}, 1fr)`;
     for (i = 0; i < nb * nb; i++) {
         const div = document.createElement('div');
         div.setAttribute('class', i);
@@ -45,4 +45,15 @@ function addColor(pixel) {
     pixel.style.backgroundColor = color;
 }
 
+
+function switchColor() {
+
+}
+
+
+
 createGrid();
+
+
+
+//TO ADD : SWITCH COLOR + RESET GRID TO WHITE
