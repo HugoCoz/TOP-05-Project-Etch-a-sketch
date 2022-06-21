@@ -1,7 +1,7 @@
 const wrapper = document.querySelector("body > div.wrapper");
 const btns = document.querySelectorAll('.choice-btns > button');
 
-//Selection of the grid format
+//Selection of the grid format (will be changed later for a slider 1x1 to 64x64)
 const gridFormat = btns.forEach(btn => {
     const nb = parseInt(btn.textContent);
     btn.addEventListener('click', () => setGrid(nb));
@@ -29,14 +29,14 @@ function setGrid(nb) {
         grid.appendChild(div);
     }
     
-    //Select pixels to add colors
+    //Select pixels to add colors on the new grid generated
     const pixels = document.querySelectorAll('.grid > div').forEach(pixel => {
         pixel.addEventListener('mouseover', () => addColor(pixel))
     });
 }
 
 
-//Add the colors to the pixels
+//Adding the colors to the pixels (+ later : choosing the color)
 function addColor(pixel, color) {
     color = "red"
     pixel.style.backgroundColor = color;
