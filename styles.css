@@ -2,6 +2,16 @@ h1 {
     text-align: center;
 }
 
+.choice-btns {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .wrapper {
     margin: 0 auto;
+}
+
+.grid div {
+    border: 1px solid black;
 }
