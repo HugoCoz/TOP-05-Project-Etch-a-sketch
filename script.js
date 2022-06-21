@@ -1,18 +1,22 @@
+const selectFormat = document.querySelector('.select-format');
 const wrapper = document.querySelector("body > div.wrapper");
-const btns = document.querySelectorAll('.choice-btns > button');
-
-//Selection of the grid format (will be changed later for a slider 1x1 to 64x64)
-const gridFormat = btns.forEach(btn => {
-    const nb = parseInt(btn.textContent);
-    btn.addEventListener('click', () => setGrid(nb));
+const slider = document.querySelector('#myRange');
+const gridFormat = slider.addEventListener('click', function slide() {
+    setGrid(slider.value);
+    const textValue = document.querySelector('.grid-value');
+    textValue.innerHTML = `${slider.value} x ${slider.value}`;
 });
+
+let color = "red";
 
 
 //Create the starting grid
 function createGrid () {
     const newGrid = document.createElement('div');
+    const actualFormat = document.createElement('span');
     newGrid.setAttribute('class', 'grid');
     wrapper.appendChild(newGrid);
+    setGrid(16);
 };
 
 
@@ -37,8 +41,7 @@ function setGrid(nb) {
 
 
 //Adding the colors to the pixels (+ later : choosing the color)
-function addColor(pixel, color) {
-    color = "red"
+function addColor(pixel) {
     pixel.style.backgroundColor = color;
 }
 
