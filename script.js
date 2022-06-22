@@ -16,9 +16,10 @@ function createGrid () {
     const actualFormat = document.createElement('span');
     newGrid.setAttribute('class', 'grid');
     wrapper.appendChild(newGrid);
-    setGrid(16);
+    setGrid(40);
 };
 
+//Update the grid depending on the slide value + updating the content of the text format
 function slide() {
     setGrid(slider.value);
     const textValue = document.querySelector('.grid-value');
@@ -40,7 +41,7 @@ function setGrid(nb) {
     
     //Select pixels to add colors on the new grid generated
     const pixels = document.querySelectorAll('.grid > div').forEach(pixel => {
-        pixel.addEventListener('mouseover', () => addColor(pixel))
+        pixel.addEventListener('click', () => addColor(pixel))
     });
 }
 
