@@ -1,11 +1,11 @@
-const selectFormat = document.querySelector('.select-format');
+//Variables
 const wrapper = document.querySelector(".wrapper");
 const slider = document.querySelector('#myRange');
-const gridFormat = slider.addEventListener('click', function slide() {
-    setGrid(slider.value);
-    const textValue = document.querySelector('.grid-value');
-    textValue.innerHTML = `${slider.value} x ${slider.value}`;
+const slideValue = slider.addEventListener('click', () => slide());
+const selectColor = document.querySelectorAll('div.colors > div.item-color').forEach(choosenColor => {
+    choosenColor.addEventListener('click', () => switchColor(choosenColor));
 });
+const reset = document.querySelector('div.reset > button').addEventListener('click', () => resetGrid());
 
 let color = "red";
 
@@ -19,6 +19,11 @@ function createGrid () {
     setGrid(16);
 };
 
+function slide() {
+    setGrid(slider.value);
+    const textValue = document.querySelector('.grid-value');
+    textValue.innerHTML = `${slider.value} x ${slider.value}`;
+}
 
 //Change the format of the grid
 function setGrid(nb) {
@@ -46,14 +51,20 @@ function addColor(pixel) {
 }
 
 
-function switchColor() {
-
+function switchColor(choosenColor) {
+    color = choosenColor.style.backgroundColor;
+    return color;
 }
 
+function resetGrid() {
+    document.querySelectorAll('div.grid > div').forEach(div => {
+        div.style.backgroundColor = "white";
+    });
+};
 
 
 createGrid();
 
 
 
-//TO ADD : SWITCH COLOR + RESET GRID TO WHITE
+//TO ADD : (PIXEL ART AU LANCEMENT)

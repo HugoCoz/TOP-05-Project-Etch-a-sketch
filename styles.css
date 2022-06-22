@@ -9,20 +9,24 @@ h1 {
 }
 
 .main-game {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
 }
 
 .colors {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
+    align-items: center;
+    max-height: 500px;
 }
 
 .item-color {
     width: 50px;
     height: 50px;
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 .wrapper {
@@ -37,4 +41,13 @@ h1 {
 
 .grid div {
     border: 1px solid black;
+}
+
+.reset {
+    text-align: center;
+    padding: 30px;
+}
+.reset button {
+    width: 150px;
+    height: 30px;
 }
