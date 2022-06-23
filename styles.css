@@ -1,5 +1,10 @@
+body {
+    background-color: #666666;
+}
+
 h1 {
     text-align: center;
+    color: white;
 }
 
 .select-format {
@@ -40,7 +45,7 @@ h1 {
 }
 
 .grid div {
-    border: 1px solid black;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 .reset {
