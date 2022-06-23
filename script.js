@@ -65,7 +65,3 @@ function resetGrid() {
 
 
 createGrid();
-
-
-
-//TO ADD : (PIXEL ART AU LANCEMENT)
