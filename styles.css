@@ -15,10 +15,10 @@ h1 {
 
 .main-game {
     display: grid;
-    grid-template-columns: 1fr 80% 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
 }
 
-.colors {
+.colors, .pixel-art {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

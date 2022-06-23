@@ -6,6 +6,7 @@ const selectColor = document.querySelectorAll('div.colors > div.item-color').for
     choosenColor.addEventListener('click', () => switchColor(choosenColor));
 });
 const reset = document.querySelector('div.reset > button').addEventListener('click', () => resetGrid());
+const sexyButton = document.querySelector('.sexy-woman').addEventListener('click', () => sexyWoman());
 
 let color = "red";
 
@@ -65,3 +66,6 @@ function resetGrid() {
 
 
 createGrid();
+
+
+//TO DO : selecteur de couleur + mode rainbow + adapter text du format
