@@ -1679,5 +1679,3 @@ function sexyWoman() {
         coloredPixel.style.backgroundColor = "rgb(249, 103, 132)";
     };
 };
-
-sexyWoman();

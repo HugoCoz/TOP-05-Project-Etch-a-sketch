@@ -42,7 +42,7 @@ function setGrid(nb) {
     
     //Select pixels to add colors on the new grid generated
     const pixels = document.querySelectorAll('.grid > div').forEach(pixel => {
-        pixel.addEventListener('click', () => addColor(pixel))
+        pixel.addEventListener('mouseover', () => addColor(pixel))
     });
 }
 
